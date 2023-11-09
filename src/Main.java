@@ -7,19 +7,10 @@ public class Main {
         System.out.println("Before");
         System.out.println(Arrays.toString(numbers));
 
-        for (int j = 0; j < numbers.length - 1 ;j++){
+        for (int j = 1; j < numbers.length ;j++){
             counter++;
-            if (numbers[j]> numbers[j + 1]){
-                int greater = numbers[j];
-                numbers[j] = numbers[j + 1];
-                numbers[j + 1] = greater;
+            for (int i = 0; i < numbers.length - j;i++){
                 counter++;
-
-            }
-            for (int i = 0; i < numbers.length - 1;i++){
-
-                counter++;
-
                 if(numbers[i]>numbers[i + 1]){
                     int greater2 = numbers[i];
                     numbers[i] = numbers[i + 1];
